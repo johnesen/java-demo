@@ -17,7 +17,7 @@ public class JWTTokenProvider {
 
     public static final Logger LOG = LoggerFactory.getLogger(JWTTokenProvider.class);
 
-    public String genereateToken(Authentication authentication) {
+    public String generateToken(Authentication authentication) {
         User user = (User) authentication.getPrincipal();
         Date now = new Date(System.currentTimeMillis());
         Date expirityDate = new Date(now.getTime() + SecurityConstants.EXPIRATION_TIME);
